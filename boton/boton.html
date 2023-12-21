@@ -22,13 +22,14 @@
         var numeroContadorVerdad = document.getElementById("contadorVerdad");
         var numeroContadorFalso = document.getElementById("contadorFalso");
         var verified = document.createElement('img'); 
-        verified.src = 'media/approved.png';
+        verified.src = '../media/approved.png';
         var approved = document.createElement('img'); 
-        approved.src = 'media/verified.png';
+        approved.src = '../media/verified.png';
         var declined = document.createElement('img');
-        declined.src = 'media/declined.png'
+        declined.src = '../media/declined.png';
         var rejected = document.createElement('img');
-        rejected.src = 'media/rejected.png'
+        rejected.src = '../media/rejected.png';
+
 
         function contadorV(){
         numeroContadorVerdad.textContent = numeroV;
@@ -43,7 +44,9 @@
         function contadorF(){
         numeroContadorFalso.innerHTML = numeroF++;
         if (numeroF == (5 +1)){
+    
             document.body.appendChild(declined);
+            
         }
         if (numeroF == (20 +1)){
             document.body.appendChild(rejected);
