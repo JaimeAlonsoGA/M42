@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-    </body>
+<head>
+   <meta charset="UTF-8" />
+   <title>Fake Nius</title>
+   <link rel="stylesheet" href="mainCSS.css">
+</head>
+<body>
+   <div class="logo"><img src="Logo.png" alt="Logo" class="center"></div>
+   <div class="titulos"><h1>Forum de discusión</h1></div>
+   <div class="noticiasforum"><h3 class="centro">Cómo puede ayudar la inteligencia artificial en la búsqueda de la eterna juventud</h3>
+       <p class="centro"><strong>Noticia de bbc.com</strong></p>
+       <p>Usando la inteligencia artificial, Wong pudo probar cómo más de 800.000 opciones de soluciones químicas reaccionaban con posibles medicamentos capaces de seleccionar y eliminar células senescentes, conocidas como las "células zombies" del cuerpo y que conducen a procesos de envejecimiento.</p>
+       <p>Al final del experimento, su equipo logró identificar tres fármacos potenciales que, en teoría, podrían lograr este tipo de efecto.
+       <p>“Si tuviéramos que verlo todo, es decir, mirar cada compuesto uno por uno, requeriría un esfuerzo sustancial, ya que el pajar sería casi infinito”, afirma Wong.
+       <p>"Utilizamos la IA para buscar en este pajar de manera mucho más eficiente, haciendo que la máquina prediga cuáles de estos fármacos candidatos tienen más probabilidades de funcionar".
+       <p>En declaraciones a Nature Aging, el biofísico Andrew Rutenberg, profesor de la Universidad de Dalhousie, en Canadá, destacó esta metodología como el gran diferenciador de la investigación.
+       <p> "Este impresionante trabajo utiliza técnicas de aprendizaje profundo automático para explorar diversas estructuras moleculares y utilizarlas como nuevos senolíticos".
+       <p>Los autores muestran cómo se puede utilizar la informática química para crear nuevos fármacos prometedores en la lucha contra el envejecimiento, luego probarlos y compartir detalles de su software para ayudar a acelerar futuros descubrimientos moleculares.</p>
+   </div>
+   <div class="botonVerde">
+       <button class ="verdad" type ="button" onclick="contadorV()">¡Verdad!</button>
+       <p class="contadores" id="contadorVerdad">0</p>
+   </div>
+
+
+
+
+   <div class ="botonRojo">
+       <button class="falso" type ="button" onclick="contadorF()">¡Falso!</button>
+       <p class="contadores" id="contadorFalso">0</p>
+   </div>
+ 
+   <script type="text/javascript">
+       var numeroV = 1
+       var numeroF = 1;
+       var numeroContadorVerdad = document.getElementById("contadorVerdad");
+       var numeroContadorFalso = document.getElementById("contadorFalso");
+
+
+
+
+       function contadorV(){
+       numeroContadorVerdad.textContent = numeroV;
+       numeroContadorVerdad.innerHTML = numeroV++;
+       }
+       function contadorF(){
+       numeroContadorFalso.innerHTML = numeroF++;
+       }
+   </script>
+   <div class="links"><h3>Links / Debate</h3></div>
+   <div class="noticiasforum"></div>
+</body>
 </html>

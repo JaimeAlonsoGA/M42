@@ -1,0 +1,61 @@
+.noticiasforum{
+    background-color: antiquewhite;
+    margin: 50px;
+    border-radius: 25px;
+    font-size: 12px;
+    padding: 15px;
+    max-width: 50%;
+    float:left;
+ }
+ 
+ 
+ .barraizquierda{
+    float: left;
+ }
+ .centro{
+    text-align:center
+ }
+ .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ .logo{
+    background-color: rgb(54, 54, 54);
+ }
+ .titulos{
+    text-align:center;
+    color: red;
+    background-color: rgb(54, 54, 54);
+    margin-top: 50px;
+ }
+ body{
+    background-color: black;
+ }
+ button{
+    box-sizing: border-box;
+    flex-direction: column-reverse;
+    padding: 6px 6px;
+    float:right;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 200px;
+ }
+ .verdad{
+    background-color: green;
+ }
+ .falso{
+    background-color: red;
+ }
+ .contadores{
+    color:red;
+    float:right;
+    margin-top:205px;
+ }
+ .links{
+    text-align:center;
+    color: red;
+    background-color: rgb(54, 54, 54);
+    margin-top: 550px;
+ }
+ 
