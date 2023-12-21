@@ -1,54 +1,114 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <meta charset="UTF-8" />
-   <title>Fake Nius</title>
-   <link rel="stylesheet" href="mainCSS.css">
+    <meta charset="UTF-8" />
+    <title>Fake Nius</title>
+    <link rel="stylesheet" href="mainCSS.css">
+
 </head>
+
 <body>
-   <div class="logo"><img src="Logo.png" alt="Logo" class="center"></div>
-   <div class="titulos"><h1>Forum de discusión</h1></div>
-   <div class="noticiasforum"><h3 class="centro">Cómo puede ayudar la inteligencia artificial en la búsqueda de la eterna juventud</h3>
-       <p class="centro"><strong>Noticia de bbc.com</strong></p>
-       <p>Usando la inteligencia artificial, Wong pudo probar cómo más de 800.000 opciones de soluciones químicas reaccionaban con posibles medicamentos capaces de seleccionar y eliminar células senescentes, conocidas como las "células zombies" del cuerpo y que conducen a procesos de envejecimiento.</p>
-       <p>Al final del experimento, su equipo logró identificar tres fármacos potenciales que, en teoría, podrían lograr este tipo de efecto.
-       <p>“Si tuviéramos que verlo todo, es decir, mirar cada compuesto uno por uno, requeriría un esfuerzo sustancial, ya que el pajar sería casi infinito”, afirma Wong.
-       <p>"Utilizamos la IA para buscar en este pajar de manera mucho más eficiente, haciendo que la máquina prediga cuáles de estos fármacos candidatos tienen más probabilidades de funcionar".
-       <p>En declaraciones a Nature Aging, el biofísico Andrew Rutenberg, profesor de la Universidad de Dalhousie, en Canadá, destacó esta metodología como el gran diferenciador de la investigación.
-       <p> "Este impresionante trabajo utiliza técnicas de aprendizaje profundo automático para explorar diversas estructuras moleculares y utilizarlas como nuevos senolíticos".
-       <p>Los autores muestran cómo se puede utilizar la informática química para crear nuevos fármacos prometedores en la lucha contra el envejecimiento, luego probarlos y compartir detalles de su software para ayudar a acelerar futuros descubrimientos moleculares.</p>
-   </div>
-   <div class="botonVerde">
-       <button class ="verdad" type ="button" onclick="contadorV()">¡Verdad!</button>
-       <p class="contadores" id="contadorVerdad">0</p>
-   </div>
+
+    <header class="main-header">
+        <label for="btn-nav" class="btn-nav">menu<i class="texto"></i></label>
+        <input type="checkbox" id="btn-nav">
+        
+        <nav>
+          <ul class="navigation">
+            <li><a href="#inicio">Inicio</a></li> <!-- que te lleve a inicio-->
+            <li><a>Porpósito</a></li>
+                <ul>
+                    <li class ="submenu">Nuestro propósito es crear un entorno web en el que los usuarios puedan ayudar a sentenciar la veracidad de información dudosa con un sencillo sistema de votaciones y links además de proponer sus propios artículos a juicio. En conclusión: luchar contra la desinformación virtual.</li>
+                </ul>
+            </li>
+            <li><a>Reglas</a>
+                <ul class="submenu">
+                    <li>Las votaciones han de ser conscientes</li>
+                    <li>Solo puedes votar una vez por noticia</li>
+                    <li>Los links que adjuntes deberán tener que ver con el tema</li>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="registrarse">Registrarse</button> <!--te llevan a la página de registro-->
+        <button class="iniciarsesion">Inicar sesión</button> <!--te llevan a la página de incio de sesión-->
+
+        <div><img src="media/Logo.png" alt="Logo" class="logo"></div>
+        
+        <div class="titulos"><h1>Fake Nius</h1></div>
+       
+    </header>
+
+    <main>
+        <div class="noticiasforum">
+            <h3 class="centrar">Cómo puede ayudar la inteligencia artificial en la búsqueda de la eterna juventud</h3>
+            <br>
+            <p class="centrar"><strong>Noticia de bbc.com</strong></p>
+            <br>
+            <p>
+                Usando la inteligencia artificial, Wong pudo probar cómo más de 800.000 opciones de soluciones químicas
+                reaccionaban con posibles medicamentos capaces de seleccionar y eliminar células senescentes, conocidas
+                como
+                las "células zombies" del cuerpo y que conducen a procesos de envejecimiento.
+                Al final del experimento, su equipo logró identificar tres fármacos potenciales que, en teoría, podrían
+                lograr
+                este tipo de efecto.
+                “Si tuviéramos que verlo todo, es decir, mirar cada compuesto uno por uno, requeriría un esfuerzo
+                sustancial, ya
+                que el pajar sería casi infinito”, afirma Wong.
+                "Utilizamos la IA para buscar en este pajar de manera mucho más eficiente, haciendo que la máquina
+                prediga
+                cuáles de estos fármacos candidatos tienen más probabilidades de funcionar".
+                En declaraciones a Nature Aging, el biofísico Andrew Rutenberg, profesor de la Universidad de Dalhousie,
+                en
+                Canadá, destacó esta metodología como el gran diferenciador de la investigación.
+                "Este impresionante trabajo utiliza técnicas de aprendizaje profundo automático para explorar diversas
+                estructuras moleculares y utilizarlas como nuevos senolíticos".
+                Los autores muestran cómo se puede utilizar la informática química para crear nuevos fármacos
+                prometedores
+                en la
+                lucha contra el envejecimiento, luego probarlos y compartir detalles de su software para ayudar a
+                acelerar
+                futuros descubrimientos moleculares.
+            </p>
+        </div>
+
+        <div class="botonVerde">
+            <button class="verdad" type="button" onclick="contadorV()">¡Verdad!</button>
+            <p class="contadores" id="contadorVerdad">0</p>
+        </div>
 
 
 
 
-   <div class ="botonRojo">
-       <button class="falso" type ="button" onclick="contadorF()">¡Falso!</button>
-       <p class="contadores" id="contadorFalso">0</p>
-   </div>
- 
-   <script type="text/javascript">
-       var numeroV = 1
-       var numeroF = 1;
-       var numeroContadorVerdad = document.getElementById("contadorVerdad");
-       var numeroContadorFalso = document.getElementById("contadorFalso");
+        <div class="botonRojo">
+            <button class="falso" type="button" onclick="contadorF()">¡Falso!</button>
+            <p class="contadores" id="contadorFalso">0</p>
+        </div>
+
+        <script type="text/javascript">
+            var numeroV = 1
+            var numeroF = 1;
+            var numeroContadorVerdad = document.getElementById("contadorVerdad");
+            var numeroContadorFalso = document.getElementById("contadorFalso");
 
 
 
 
-       function contadorV(){
-       numeroContadorVerdad.textContent = numeroV;
-       numeroContadorVerdad.innerHTML = numeroV++;
-       }
-       function contadorF(){
-       numeroContadorFalso.innerHTML = numeroF++;
-       }
-   </script>
-   <div class="links"><h3>Links / Debate</h3></div>
-   <div class="noticiasforum"></div>
+            function contadorV() {
+                numeroContadorVerdad.textContent = numeroV;
+                numeroContadorVerdad.innerHTML = numeroV++;
+            }
+            function contadorF() {
+                numeroContadorFalso.innerHTML = numeroF++;
+            }
+        </script>
+
+        <div class="noticiasforum"><h3 class="links">Links / Debate</h3></div>
+
+    </main>
+
 </body>
+
 </html>
