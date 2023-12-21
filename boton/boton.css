@@ -1,0 +1,16 @@
+button{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 6px 6px;
+    float:left;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.verdad{
+    background-color: green;
+}
+.falso{
+    background-color: red;
+}

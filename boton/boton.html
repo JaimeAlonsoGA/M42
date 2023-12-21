@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href ="boton.css" media = "screen"/>
+</head>
+<body>
+    <div class="botonVerde">
+        <button class ="verdad" type ="button" onclick="contadorV()">¡Verdad!</button>
+        <p class="contadores" id="contadorVerdad">0</p>
+    </div>
+
+    <div class ="botonRojo">
+        <button class="falso" type ="button" onclick="contadorF()">¡Falso!</button>
+        <p class="contadores" id="contadorFalso">0</p>
+    </div> 
+    
+    <script type="text/javascript">
+        var numeroV = 1
+        var numeroF = 1;
+        var numeroContadorVerdad = document.getElementById("contadorVerdad");
+        var numeroContadorFalso = document.getElementById("contadorFalso");
+        var verified = document.createElement('img'); 
+        verified.src = 'media/approved.png';
+        var approved = document.createElement('img'); 
+        approved.src = 'media/verified.png';
+        var declined = document.createElement('img');
+        declined.src = 'media/declined.png'
+        var rejected = document.createElement('img');
+        rejected.src = 'media/rejected.png'
+        document.body.appendChild(approved);
+
+        function contadorV(){
+        numeroContadorVerdad.textContent = numeroV;
+        numeroContadorVerdad.innerHTML = numeroV++;
+        if (numeroV == (5 + 1)){
+            document.body.appendChild(approved);
+        }
+        if (numeroV == (20 +1)){
+            document.body.appendChild(verified);
+        }
+        }
+        function contadorF(){
+        numeroContadorFalso.innerHTML = numeroF++;
+        if (numeroF == (5 +1)){
+            document.body.appendChild(declined);
+        }
+        if (numeroF == (20 +1)){
+            document.body.appendChild(rejected);
+        }
+    }
+    </script>
+</body>
+</html>
+
