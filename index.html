@@ -34,8 +34,8 @@
             </ul>
         </nav>
 
-        <button class="registrarse">Registrarse</button> <!--te lleva a la página de registro-->
-        <button class="iniciarsesion">Inicar sesión</button> <!--te lleva a la página de incio de sesión-->
+        <button class="registrarse"><a href="./login.html">Registrarse</a></button> <!--te lleva a la página de registro-->
+        <button class="iniciarsesion"><a href="./login.html">Iniciar sesión</a></button> <!--te lleva a la página de incio de sesión-->
         <button class="nuevojuicio">Nuevo Juicio</button> <!--te lleva a la página de incio de sesión-->
 
 
@@ -49,8 +49,8 @@
 
     <main>
 
-        <article>
-            <div class="noticiasforum">
+        <article class="noticiasforum">
+            <div>
                 <h3 class="centrar">Cómo puede ayudar la inteligencia artificial en la búsqueda de la eterna juventud
                 </h3>
                 <br>
@@ -96,6 +96,20 @@
                             <button id="verdad" onclick="registrarClic('verdad')">¡Verdad!</button>
                             <button id="falso" onclick="registrarClic('falso')">¡Falso!</button>
                         </div>
+                    <td>
+                        <div>
+                            <label for="btn-links" class="btn-links">links<i class="links"></i></label>
+                            <input type="checkbox" id="btn-links">
+                            <!--<nav class="navlinks">
+                                <ul class="displaylinks">
+                                    <li><a>link 1</a></li>
+                                    <li><a>link 2</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        -->
+
+                    </td>
                     </td>
                 </tr>
                 <tr>
@@ -107,17 +121,10 @@
                     </td>
                 </tr>
             </table>
-            <div>
-                <label for="btn-links" class="btn-links">links<i class="links"></i></label>
-                <input type="checkbox" id="btn-links">
+            <br>
+            <p class="iatexto">el 80% de este texto ha sido escrito por una IA (esta información puede no ser correcta)</p><br>
+            <p>POWERED BY COPYLEAKS</p>
 
-                <nav class="navlinks">
-                    <ul class="displaylinks">
-                        <li><a>link 1</a></li>
-                        <li><a>link 2</a></li>
-                    </ul>
-                </nav>
-            </div>
 
         </article>
 
@@ -151,6 +158,7 @@
 
                 const porcentajeverdad = (clicsverdad / totalClics) * 100 || 0;
                 const porcentajefalso = (clicsfalso / totalClics) * 100 || 0;
+                const iaTexto = 80;
 
                 const registroElementV = document.getElementById("registroV");
                 const registroElementF = document.getElementById("registroF");
@@ -159,16 +167,16 @@
             }
 
 
-                /*
-                if (numeroF == (5 + 1)) {
+            /*
+            if (numeroF == (5 + 1)) {
 
-                    document.body.appendChild(declined);
+                document.body.appendChild(declined);
 
-                }
-                if (numeroF == (20 + 1)) {
-                    document.body.appendChild(rejected);
-                }
-                */
+            }
+            if (numeroF == (20 + 1)) {
+                document.body.appendChild(rejected);
+            }
+            */
 
         </script>
 
