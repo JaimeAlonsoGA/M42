@@ -36,6 +36,8 @@
 
         <button class="registrarse">Registrarse</button> <!--te lleva a la página de registro-->
         <button class="iniciarsesion">Inicar sesión</button> <!--te lleva a la página de incio de sesión-->
+        <button class="nuevojuicio">Nuevo Juicio</button> <!--te lleva a la página de incio de sesión-->
+
 
         <div><img src="media/Logo.png" alt="Logo" class="logo"></div>
 
@@ -46,6 +48,7 @@
     </header>
 
     <main>
+
         <article>
             <div class="noticiasforum">
                 <h3 class="centrar">Cómo puede ayudar la inteligencia artificial en la búsqueda de la eterna juventud
@@ -86,90 +89,28 @@
                 </p>
             </div>
 
-            <div class="botonVerde">
-                <button class="verdad" type="button" onclick="contadorV()">¡Verdad!</button>
-                <p class="contadores" id="contadorVerdad">0</p>
-            </div>
-
-
-
-
-            <div class="botonRojo">
-                <button class="falso" type="button" onclick="contadorF()">¡Falso!</button>
-                <p class="contadores" id="contadorFalso">0</p>
-            </div>
-
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <div class="buttons">
+                            <button id="verdad" onclick="registrarClic('verdad')">¡Verdad!</button>
+                            <button id="falso" onclick="registrarClic('falso')">¡Falso!</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="registroV"></p>
+                    </td>
+                    <td>
+                        <p id="registroF"></p>
+                    </td>
+                </tr>
+            </table>
             <div>
                 <label for="btn-links" class="btn-links">links<i class="links"></i></label>
                 <input type="checkbox" id="btn-links">
-        
-                <nav class="navlinks">
-                    <ul class="displaylinks">
-                        <li><a>link 1</a></li>
-                        <li><a>link 2</a></li>
-                    </ul>
-                </nav>
-            </div>
 
-        </article>
-
-        <article>
-            <div class="noticiasforum">
-                <h3 class="centrar">Cómo puede ayudar la inteligencia artificial en la búsqueda de la eterna juventud
-                </h3>
-                <br>
-                <p class="centrar"><strong>Noticia de bbc.com</strong></p>
-                <br>
-                <p>
-                    Usando la inteligencia artificial, Wong pudo probar cómo más de 800.000 opciones de soluciones
-                    químicas
-                    reaccionaban con posibles medicamentos capaces de seleccionar y eliminar células senescentes,
-                    conocidas
-                    como
-                    las "células zombies" del cuerpo y que conducen a procesos de envejecimiento.
-                    Al final del experimento, su equipo logró identificar tres fármacos potenciales que, en teoría,
-                    podrían
-                    lograr
-                    este tipo de efecto.
-                    “Si tuviéramos que verlo todo, es decir, mirar cada compuesto uno por uno, requeriría un esfuerzo
-                    sustancial, ya
-                    que el pajar sería casi infinito”, afirma Wong.
-                    "Utilizamos la IA para buscar en este pajar de manera mucho más eficiente, haciendo que la máquina
-                    prediga
-                    cuáles de estos fármacos candidatos tienen más probabilidades de funcionar".
-                    En declaraciones a Nature Aging, el biofísico Andrew Rutenberg, profesor de la Universidad de
-                    Dalhousie,
-                    en
-                    Canadá, destacó esta metodología como el gran diferenciador de la investigación.
-                    "Este impresionante trabajo utiliza técnicas de aprendizaje profundo automático para explorar
-                    diversas
-                    estructuras moleculares y utilizarlas como nuevos senolíticos".
-                    Los autores muestran cómo se puede utilizar la informática química para crear nuevos fármacos
-                    prometedores
-                    en la
-                    lucha contra el envejecimiento, luego probarlos y compartir detalles de su software para ayudar a
-                    acelerar
-                    futuros descubrimientos moleculares.
-                </p>
-            </div>
-
-            <div class="botonVerde">
-                <button class="verdad" type="button" onclick="contadorV()">¡Verdad!</button>
-                <p class="contadores" id="contadorVerdad">0</p>
-            </div>
-
-
-
-
-            <div class="botonRojo">
-                <button class="falso" type="button" onclick="contadorF()">¡Falso!</button>
-                <p class="contadores" id="contadorFalso">0</p>
-            </div>
-
-            <div>
-                <label for="btn-links" class="btn-links2">links<i class="links"></i></label>
-                <input type="checkbox" id="btn-links">
-        
                 <nav class="navlinks">
                     <ul class="displaylinks">
                         <li><a>link 1</a></li>
@@ -183,10 +124,7 @@
 
 
         <script type="text/javascript">
-            var numeroV = 1
-            var numeroF = 1;
-            var numeroContadorVerdad = document.getElementById("contadorVerdad");
-            var numeroContadorFalso = document.getElementById("contadorFalso");
+
             var verified = document.createElement('img');
             verified.src = './media/approved.png';
             var approved = document.createElement('img');
@@ -195,22 +133,32 @@
             declined.src = './media/declined.png';
             var rejected = document.createElement('img');
             rejected.src = './media/rejected.png';
+            let clicsverdad = 0;
+            let clicsfalso = 0;
 
-
-
-            function contadorV() {
-                numeroContadorVerdad.innerHTML = numeroV++;
-                /*
-                if (numeroV == (5 + 1)) {
-                    document.body.appendChild(approved);
+            function registrarClic(boton) {
+                if (boton === "verdad") {
+                    clicsverdad++;
+                } else if (boton === "falso") {
+                    clicsfalso++;
                 }
-                if (numeroV == (20 + 1)) {
-                    document.body.appendChild(verified);
-                }
-                */
+
+                actualizarRegistro();
             }
-            function contadorF() {
-                numeroContadorFalso.innerHTML = numeroF++;
+
+            function actualizarRegistro() {
+                const totalClics = clicsverdad + clicsfalso;
+
+                const porcentajeverdad = (clicsverdad / totalClics) * 100 || 0;
+                const porcentajefalso = (clicsfalso / totalClics) * 100 || 0;
+
+                const registroElementV = document.getElementById("registroV");
+                const registroElementF = document.getElementById("registroF");
+                registroElementV.innerHTML = `<p style="color: #4CAF50">Verdadero: ${porcentajeverdad.toFixed(2)}%</p>`;
+                registroElementF.innerHTML = `<p style="color: #D9534F">Falso: ${porcentajefalso.toFixed(2)}%</p>`;
+            }
+
+
                 /*
                 if (numeroF == (5 + 1)) {
 
@@ -221,7 +169,7 @@
                     document.body.appendChild(rejected);
                 }
                 */
-            }
+
         </script>
 
     </main>
